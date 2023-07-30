@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .grid {
+            display: grid;
+            place-items: center;
+        }
+
+        .progress-container {
+            width: 30%;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progressbar {
+            width: 0;
+            height: 20px;
+            background-color: #ffd724;
+            border-radius: 5px;
+            transition: width 2s;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function redirect(type, gewinn, benutztergewinn) {
+            const url = `/result?type=${type}&gewinn=${gewinn}&benutztergewinn=${benutztergewinn}`;
+            window.location.href = url;
+        }
+
+        setTimeout(function () {
+            const type = "{{ type }}"; 
+            const gewinn = "{{ gewinn }}"; 
+            const benutztergewinn = "{{ benutztergewinn }}"; 
+
+            redirect(type, gewinn, benutztergewinn);
+        }, 2000);
+
+        function updateProgressBar() {
+            const progressBar = document.getElementById("progressbar");
+            progressBar.style.width = "100%";
+        }
+        setTimeout(updateProgressBar, 10); 
+    </script>
+</head>
+<body>
+    <div class="grid">
+        <div class="tenor-gif-embed" data-postid="24395792" data-share-method="host" data-aspect-ratio="1.09589" data-width="30%">
+            <a href="https://tenor.com/view/pixel-money-coin-laenmo-gif-24395792">Pixel Money Sticker</a>
+            from <a href="https://tenor.com/search/pixel-stickers">Pixel Stickers</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+        <div class="progress-container">
+            <div class="progressbar" id="progressbar"></div>
+        </div>
+    </div>
+</body>
+</html>

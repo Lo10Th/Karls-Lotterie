@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lottery Admin</title>
+</head>
+<body>
+    <h1>Lottery Admin</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Gewinn</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2>Gesamtgewinn: {{ gesamtgewinn }}</h2>
+</body>
+</html>
