@@ -6,6 +6,9 @@ __pycache__/
 #database
 lottery_data.db
 
+#vscode
+.vscode
+
 # C extensions
 *.so
 

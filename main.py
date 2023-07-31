@@ -59,6 +59,14 @@ def uebergangend():
 
     return render_template(f'{type}.html', gewinn=gewinn, benutztergewinn=benutztergewinn)
 
+@app.route('/uebergangend')
+def uebergangend_template():
+    type = request.args.get('type')
+    gewinn = float(request.args.get('gewinn'))
+    benutztergewinn = float(request.args.get('benutztergewinn'))
+
+    return render_template(f'{type}.html', gewinn=gewinn, benutztergewinn=benutztergewinn)
+
 
 @app.route('/loskaufen', methods=['POST'])
 def loskaufen():
