@@ -68,7 +68,8 @@ def loskaufen():
     if random.randint(1, 3) == 1:
         if geld == 1:
             benutztergewinn = einsatz * 1.33 
-            gewinn = (benutztergewinn * -1) - einsatz
+            gewinn = (benutztergewinn * -1) + einsatz
+            gewinn = round(gewinn, 2)
             add_to_lottery_data(gewinn)
             return render_template(f'uebergang.html', type='won4', gewinn=gewinn, benutztergewinn=benutztergewinn)
 
@@ -80,7 +81,7 @@ def loskaufen():
 
         else:
             benutztergewinn = einsatz * 2.66
-            gewinn = (benutztergewinn * -1) - einsatz
+            gewinn = (benutztergewinn * -1) + einsatz
             add_to_lottery_data(gewinn)
             return render_template(f'uebergang.html', type='won8', gewinn=gewinn, benutztergewinn=benutztergewinn)
 
