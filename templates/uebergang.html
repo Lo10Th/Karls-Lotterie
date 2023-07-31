@@ -28,8 +28,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript">
-        function redirect(type, gewinn, benutztergewinn) {
-            const url = `/result?type=${type}&gewinn=${gewinn}&benutztergewinn=${benutztergewinn}`;
+        function redirect(type, gewinn, benutztergewinn, einsatz) {
+            const url = `/result?type=${type}&gewinn=${gewinn}&benutztergewinn=${benutztergewinn}&einsatz=${einsatz}`;
             window.location.href = url;
         }
 
@@ -37,8 +37,9 @@
             const type = "{{ type }}"; 
             const gewinn = "{{ gewinn }}"; 
             const benutztergewinn = "{{ benutztergewinn }}"; 
+            const einsatz = "{{ einsatz }}"
 
-            redirect(type, gewinn, benutztergewinn);
+            redirect(type, gewinn, benutztergewinn, einsatz);
         }, 2000);
 
         function updateProgressBar() {
