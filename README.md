@@ -54,6 +54,11 @@ The application uses a SQLite database to store the lottery data. Each time a us
 
 Contributions to improve the application are welcome! Feel free to create pull requests for bug fixes, enhancements, or new features.
 
+If you want to run the tests do it like this:
+```bash
+python test_main.py
+```
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
