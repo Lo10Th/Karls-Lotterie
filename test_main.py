@@ -24,9 +24,9 @@ class TestLotteryApp(unittest.TestCase):
 
     @patch('main.random.randint')
     def test_loskaufen(self, mock_randint):
-        mock_randint.return_value = 1  # Mocken Sie den Rückgabewert von random.randint, um vorhersagbare Ergebnisse zu erzielen
+        mock_randint.return_value = 1
         response = self.app.post('/loskaufen', data={'einsatz': '3'})
-        self.assertIn(b"won4", response.data)  # Test if "won4" is present in the response
+        self.assertIn(b"won4", response.data)
         self.assertEqual(response.status_code, 200)
 
     def test_uebergangend_page(self):
